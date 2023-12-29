@@ -5,20 +5,17 @@ import Home from "./view/pages/Home"; // Adjust the import path as necessary
 import { useAppSelector } from "./store/hooks";
 import { useLazyNotificationsQuery } from "./services/rtkQuery/user";
 import { Provider } from "react-redux";
-import { store } from "./store";
-import { configureStore } from "@reduxjs/toolkit";
-import { rootReducer } from "./store/rootReducer";
+import configureMockStore from "redux-mock-store";
 
 // Mock the hooks
 jest.mock("./store/hooks", () => ({
   useAppSelector: jest.fn(),
 }));
 
-jest.mock("./store", () =>
-  configureStore({
-    reducer: rootReducer,
-  })
-);
+const mockStore = configureMockStore();
+const store = mockStore({
+  // Your initial mock state
+});
 
 jest.mock("./services/rtkQuery/user", () => ({
   useLazyNotificationsQuery: jest.fn(),
