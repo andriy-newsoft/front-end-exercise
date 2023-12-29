@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "user@email.com",
+      "password": "$2a$10$r6q9KZbjlYUkoBCzRXLIOeWnyDe7BB13KT1MUvE98xuAvEkkFCnWS",
+      "id": 1
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "title": "Welcome to Cybellum",
+      "description": "Congratulations! You have successfully completed the task.",
+      "created": "2023-01-01T00:00:00+0000"
+    },
+    {
+      "id": 2,
+      "title": "Next message",
+      "description": "Oops! Hide me.",
+      "created": "2023-01-01T00:00:01+0000"
+    },
+    {
+      "email": "user@email.com",
+      "password": "UserPassword",
+      "id": 3
+    }
+  ]
+}
