@@ -43,7 +43,6 @@ export const TextInput: FC<TextInputProps> = ({
           borderColor: "#4D4D4D",
           borderWidth: "1px",
           width: "100%",
-          height: "48px",
         }}
         error={!!error || !!errorMessage}
         type={type}
@@ -60,7 +59,7 @@ export const TextInput: FC<TextInputProps> = ({
         {...props}
       />
       {error && !errorMessage && (
-        <Typography sx={{ fontSize: 15, color: "#BA1A1A" }}>
+        <Typography sx={{ fontSize: 15, color: "#BA1A1A", marginTop: "8px" }}>
           {error.message}
         </Typography>
       )}
